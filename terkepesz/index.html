@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Térképész</title>
+</head>
+
+<body>
+    <div class="content">
+        <div id="background_image">
+            <div id="background_image_1" class="background_image_1"
+                style="background: url('theme.png') center center / cover no-repeat;">
+            </div>
+        </div>
+        <table id="cim">
+            <tr>
+                <td class="td1">Burgonya Térkép</td>
+                <td class="td2"></td>
+                <td class="td3"></td>
+                <td class="td4"></td>
+                <td class="td5"></td>
+            </tr>
+        </table>
+        <div id="game_board">
+            <table id="gridTable"></table>
+        </div>
+        <div id="jatekBe"><button id="jatekBefejez">Játék újrakezdése</button></div>
+        <div id="game_container">
+            <div id="osszpont">Összesen: 0 pont</div>
+            <div id="jatek1"></div>
+            <table id="jatekleiras">
+                <tr>
+                    <td id="jatek2">
+                    
+                    </td>
+                    <td id="jatek3">
+                       
+                    </td>
+                </tr>
+                <tr>
+                    <td class="kuldPont">A</td>
+                    <td class="kuldPont">B</td>
+                </tr>
+                <tr>
+                    <td id="jatek4"></td>
+                    <td id="jatek5"></td>
+                </tr>
+                <tr>
+                    <td class="kuldPont">C</td>
+                    <td class="kuldPont">D</td>
+                </tr>
+            </table>
+            <div id="hatralevo"></div>
+            <table id="elemek">
+                <tr>
+                    <td id="lehely">
+                        <div style="margin-bottom: 2%;">Lehelyezendő elem: </div>
+                        <div style="margin-bottom: 2%;" id="idoerteke">Időértéke: </div>
+                        <button id="rotate-button">Forgatás</button>
+                        <button id="mirror-button">Tükrözés</button> 
+
+                    </td>
+                    <td id="lerakTabla">
+                        <table id="lerakandoMezo">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

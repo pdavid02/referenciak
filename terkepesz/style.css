@@ -1,0 +1,259 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+#background_image_1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 65%;
+}
+
+#game_container {
+    width: 50%;
+    height: 100%;
+    float: right;
+    padding: 15px;
+    z-index: 2;
+}
+
+#game_board {
+    position: relative;
+    width: 50%;
+    float: left;
+    z-index: 2;
+    margin-left: 5%;
+}
+
+#gridTable {
+    width: auto;
+    height: auto;
+    background-color: white;
+    position: absolute;
+    top:1%;
+    border-collapse: separate;
+    border: 7px solid white;
+    border-radius: 3%;
+}
+
+#jatekBe{
+    position: absolute;
+    bottom: 1%;
+    left: 5%;
+}
+
+button {
+    font-size: 1rem;
+    padding: 5px 10px;
+    background-color: white;
+    color: black;
+    border: 3px solid white;
+    border-radius: 10%;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    width: 45px;
+    height: 45px;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.td1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    width: 60%;
+    position: relative;
+    left: 3%;
+}
+
+.td2,
+.td3,
+.td4,
+.td5 {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    width: 10%;
+    padding: 1%;
+    position: relative;
+    align-items: center;
+
+}
+
+.td2 {
+    background-color: lightgreen;
+    border-radius: 15%;
+    border: 4px solid green;
+    overflow: hidden;
+}
+
+.td3 {
+    background-color: rgb(167, 167, 2);
+    border-radius: 15%;
+    border: 4px solid rgb(108, 108, 0);
+    overflow: hidden;
+}
+
+.td4 {
+    background-color: bisque;
+    border-radius: 15%;
+    border: 4px solid saddlebrown;
+    overflow: hidden;
+}
+
+.td5 {
+    background-color: lightblue;
+    border-radius: 15%;
+    border: 4px solid blue;
+    overflow: hidden;
+}
+
+#cim {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+#jatekleiras {
+    position: relative;
+    border-collapse: separate;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    
+    
+}
+
+#elemek{
+    position: relative;
+    border-collapse: separate;
+    width: 100%;
+    height: auto;
+    margin-top: 1%;
+}
+
+#jatek1{
+    padding: 1%;
+    margin-bottom: 1%;
+    border-bottom: 4px solid black;
+    width: 100%;
+}
+
+#jatek2,#jatek3,#jatek4,#jatek5 {
+    width: 50%;
+    height: auto;
+    
+}
+
+#jatek3,#jatek5{
+    width: 100%;
+    height: auto;
+
+}
+
+.kuldetesek {
+    width: 75%;
+    height: auto;
+    
+}
+
+.leElemek{
+    width: 100%;
+    height: 100%;
+}
+
+#lerakandoMezo{
+    background-color: white;
+    border-collapse: separate;
+    border-radius: 5%;
+}
+
+
+#osszpont{
+    display: block;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+#hatralevo{
+    margin-top: 1%;
+    border-bottom: 4px solid black;
+}
+
+
+#lehely, #hatralevo,#osszpont, #jatek1{
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
+
+#lehely{
+    width: 50%;
+}
+
+#lerakTabla{
+    position: relative;
+}
+
+.kuldPont{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.aktiv{
+    border-collapse: separate;
+    border-radius: 15%;
+    border: 4px solid green;
+}
+
+
+
+.aktiv2{
+    border-collapse: separate;
+    border-radius: 10%;
+    border: 2px solid green;
+}
+
+.badPlace{
+    border-collapse: separate;
+    border-radius: 10%;
+    border: 2px solid red;
+}
+
+
+@media (max-width: 1024px) {
+    #game_container {
+        width: 35%;
+        height: 100%;
+        float: right;
+        padding: 4%;
+        z-index: 2;
+    }
+    #jatekBe{
+        position: absolute;
+        bottom: 2%;
+        left: 5%;
+    }
+    
+    #game_board {
+        width: 50%;
+        float: left;
+        z-index: 2;
+        margin-left: 3%;
+    }
+  }
+
