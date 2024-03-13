@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>312</x>
+      <y>168</y>
+      <w>204</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>ProgtechBead2
+--
+
+--
++main(args: String[]): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>636</y>
+      <w>192</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Player
+--
+-score: int
+--
++getScore(): int
++scorePlus()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>468</y>
+      <w>228</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Tile
+--
+-tipCount: int
+--
++getTipCount(): int
++tipTile(player : Player): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>708</x>
+      <y>588</y>
+      <w>384</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>GameModel
+--
+-board: Tile[][]
+-players: Player[]
+-currentPlayer: int
+--
++GameModel(boardSize: int)
++getTile(row: int, column:int): Tile
++tipTiles(row: int, column:int): ArrayList&lt;int[]&gt;
++getCurrentPlayer(): Player
++getCurrentPlayerIndex(): int
++endTurn()
++isOver(): boolean
++getWinner(): int
+-isValidPosition(row: int, column:int) : boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>24</y>
+      <w>588</w>
+      <h>444</h>
+    </coordinates>
+    <panel_attributes>GameGUI
+--
+-jframe: JFrame
+-jboard: JButton[][]
+-pont: JLabel[]
+-label: JLabel
+--
++GameGui()
+-setup(boardSize: int)
+-reset()
+-createTurnDisplay()
+-createPontPanels(boardSize:int, size:int)
+-createBoard(boardSize:int, size:int)
+--
+{innerclass
+ButtonListener
+--
+-row : int
+-column: int
+--
+actionPerformed(e: ActionEvent){Override}
+-handleTileClick()
+-handleTippedTile(x: int, y: int, currentPlayerIndex: int, player:Player)
+-updateTileDisplay(x:int, y:int)
+-updateTurnLabel(currenPlayerIndex:int)
+- showGameResult()
+innerclass}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>192</y>
+      <w>144</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;create&gt;&gt;</panel_attributes>
+    <additional_attributes>100.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>912</x>
+      <y>456</y>
+      <w>96</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+-model</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>648</y>
+      <w>312</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+-players
+r2=2</panel_attributes>
+    <additional_attributes>240.0;20.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>456</x>
+      <y>504</y>
+      <w>276</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+r2=n*n
+-board</panel_attributes>
+    <additional_attributes>210.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
