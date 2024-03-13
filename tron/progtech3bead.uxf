@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>100</y>
+      <w>480</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>GameModel
+--
+-palya: Tile[n][m]
+-jatekosok:Player[2]
+--
+-getRandom(min:int, max:int):int
+-generateObstcleCluster(cX:int, cY:int)
++GameModel(p1N:String,p1N:String, p1C:Color, p2C:Color, hS:int,vS:int)
++doRound():GameState
++getPlayerName(index:int): String
++getPlayerColor(index:int):Color
++getHorizontalPlayerLocation(index:int):int
++getVerticalPlayerLocation(index:int):int
++setPlayerDirection(index:int, driecton:Direction)
++getHorizontalSize():int
++getVerticalSize():int
++getColor(row:int, col:int):Color</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>870</x>
+      <y>120</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+GameState
+--
+IN_PROGRESS
+PLAYER1WON
+PLAYER2WON
+DRAW</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>140</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>870</x>
+      <y>250</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Direction
+--
+LEFT
+RIGHT
+UP
+DOWN</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>300</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>490</y>
+      <w>410</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Player
+--
+-name:String
+-color:Color
+-horizontalLocation:int
+-verticalLocation:int
+-direction:Direction
+--
++Player(name:String,color:Color,hL:int,vL:int,direction:Direction)
++getName():String
++getColor():Color
++getHorizontalLocation():int
++getVerticalLocation():int
++setDirection(d:Direction)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>240</y>
+      <w>210</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Singleton&gt;&gt;
+HighScores
+--
+-instance:HighScores
++connection:Connection
+--
+-HighScore()
++instance():HighScores
++insertScore(pName:string)
++getTopScores():HighScore[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>40</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Record&gt;&gt;
+HighScore
+--
++name:String
++score:int
+--
++HighScore(nev:String,pont:int)
++getName():String
++getScore():int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>510</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Tile
+--
+-color:Color
++SAFE_COLOR=new Color(41,53,66)
+--
++Tile()
++Tile(c:Color)
++getColor():Color
++setColor(c:Color)
++isSafe():boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>170</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>300</y>
+      <w>70</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>360</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>430</y>
+      <w>340</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;80.0;170.0;20.0;320.0;60.0</additional_attributes>
+  </element>
+</diagram>
