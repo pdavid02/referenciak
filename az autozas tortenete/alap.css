@@ -1,0 +1,403 @@
+body {
+    background-image: url("képek/hatter.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Times New Roman",sans-serif;
+    font-size: 1.1em;
+}
+
+.navszin{
+    color: rgb(80, 80, 80);
+}
+
+.hivatkozas:link{
+    color: rgb(56, 56, 56);
+}
+
+.hivatkozas:visited{
+    color: rgb(95, 95, 95);
+}
+
+.hivatkozas:hover{
+    color:rgb(201, 199, 199)
+}
+
+
+ul  {
+    line-height: 300%;
+}
+
+#fo{
+    margin-left: 11%;
+    width: 80%;
+    height:250px;
+}
+
+.kezdo{
+    font-family: 'Dancing Script', cursive; font-size: 2em;background-color:white; opacity: 85%;
+}
+
+
+hr {
+    width: 75%; 
+    margin: 20px;
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 5px;
+    background-color: black;
+}
+
+#tartalom{
+    margin-top: 30px;
+}
+
+#kezdolap{
+    
+    padding: 10%;
+    background-image: url(képek/hatter.jpg);
+    background-repeat: no-repeat;
+}
+
+.urlap{
+    margin-top: 5%;
+}
+
+.carouselelektromos{
+    min-height: 150px;
+    max-height: 300px;
+}
+
+
+#carouselExampleIndicators{
+    margin: auto;
+}
+
+
+.gallery{
+    margin: auto;
+    /* width: 80%;
+    height: 90vh; */
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 1600px;
+    max-height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-image{
+    width: 30%;
+    height: calc(50% - 20px);
+    min-width: 300px;
+    min-height: 200px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.image{
+    min-width: 150px;
+    max-width: 300px;
+    min-height: 150px;
+    max-height: 300px;
+    object-fit: cover;
+    transition: 1s;
+    cursor: pointer; 
+}
+
+.image:hover{
+    transform: scale(1.3);
+}
+
+
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 80%;
+    max-width: 1600px;
+    height: 90vh;
+    max-height: 800px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    overflow: hidden;
+    transition: 1s;
+    opacity: 0;
+}
+
+.popup.active{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.popup.active .close-btn,
+.popup.active .image-name,
+.popup.active .index,
+.popup.active .large-image,
+.popup.active .arrow-btn{
+    opacity: 1;
+    transition: opacity .5s;
+    transition-delay: 1s;
+}
+
+.top-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 300;
+}
+
+.image-name{
+    opacity: 0;
+}
+
+.close-btn{
+    opacity: 0;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f00;
+    cursor: pointer;
+}
+
+.arrow-btn{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.left-arrow{
+    left: 10px;
+}
+
+.right-arrow{
+    right: 10px;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.arrow-btn:hover{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.index{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 80px;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+}
+
+.large-image{
+    margin-top: 5%;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    opacity: 0;
+}
+
+.row{
+    margin: 4%;
+    margin-bottom: 0;
+}
+
+#elektromosnav{
+    margin: auto;
+}
+
+table{
+    table-layout: fixed;
+    margin: auto;
+    background-color: rgb(187, 238, 187);
+}
+td{
+    width: 25%;
+}
+
+table, th, td{
+    border: 2px solid black;
+    text-align: center;
+}
+
+#leiras{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: auto;
+}
+
+.leirasszoveg{
+    font-family: 'Dancing Script', cursive; font-size: 1.7em;background-color:white; opacity: 70%;
+}
+
+nav div a:hover{
+    font-size: 1.12em;
+}
+
+/* Gyengélátó */
+nav#gyengenlato a#normalbetu span {
+	background-position: -330px 0;
+}
+
+.gyenge{
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-right: 1em;
+    font-variant: small-caps;
+}
+
+a#normalbetu {
+	display: none;
+}
+
+nav#gyengenlato {
+    background-color: white;		
+	position:absolute; 		
+	width:210px;				
+	right:20px;				
+	top:10px;				
+	border:1px solid black;		
+	border-radius:0 10px 0 0 ; 
+	}
+
+nav#gyengenlato span {		
+	background-image:url("képek/ikonkeszlet.png");
+	background-repeat:no-repeat;		
+	display:inline-block;		
+	width:60px;		
+	height:60px;		
+	margin-right:5px;		
+	background-position:-240px 0px;		
+	float:left;							
+		
+}
+/* Vége */
+
+.elektromosnyomtat{
+    display: none;
+}
+
+#ugras{
+    position: absolute;
+    left: -9999px;
+}
+
+#ugras:focus{
+    position: static;
+}
+
+#tablasugo{
+    display: none;
+}
+
+/* Mobil */
+@media screen and (max-width: 540px) {
+    .kezdo{
+        font-family: 'Dancing Script', cursive; font-size: 1.4em;background-color:white; opacity: 70%;
+    }
+
+    th,td{
+        font-size: 0.65em;
+    }
+
+    #elektromos{
+        margin: auto;
+        width: 200px;
+    }
+
+
+    .gallery-image{
+        margin: auto;
+    }
+
+
+    #fo{
+        margin-left: 11%;
+        width: 80%;
+        height:130px;
+    }
+
+    nav#gyengenlato {
+        background-color: white;		
+        position:absolute; 		
+        width:210px;				
+        right:10px;				
+        top:5px;				
+        border:1px solid black;		
+        border-radius:0 10px 0 0 ; 
+        }
+
+    
+
+}
+/* vége */
+
+@media print {
+	header,main,footer{width: 100%;}
+	body{
+		font-family: 'Times New Roman', Times, serif;
+		margin: 1cm;
+        font-size: 0.8em;
+	}
+
+    ul{
+        line-height: 220%;
+    }
+
+    #video{
+        display: none;
+    }
+
+    header{
+        display: none;
+    }
+
+    .carousel-inner{
+        display: none;
+    }
+
+    .carousel-control-prev,.carousel-control-next{
+        display: none;
+    }
+
+    .elektromosnyomtat{
+        display: inline;
+        height: 110px;
+        width: 120px;
+    }
+
+	nav#gyengenlato {display: none;}
+	nav#oldalmenu {display: none;}
+
+    #tablasugo{
+        display: block;
+    }
+
+    #sugo{
+        display: none;
+    }
+
+}
